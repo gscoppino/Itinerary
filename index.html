@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="schedule-view/styles.css">
+        <link rel="stylesheet" href="calendar-view/styles.css">
+    </head>
+    <body ng-app="Itinerary" class="container-fluid">
+        <header class="row header">
+            <div class="logo">
+                <span>Itinerary</span>
+            </div>
+        </header>
+        <div class="row itinerary-wrapper">
+            <schedule-view class="col-lg-6 schedule-view"></schedule-view>
+            <calendar-view class="col-lg-6 calendar-view"></calendar-view>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+        <script src="Itinerary.js"></script>
+        <script src="schedule-view/script.js"></script>
+        <script src="calendar-view/script.js"></script>
+    </body>
+</html>

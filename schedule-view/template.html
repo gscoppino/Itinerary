@@ -1,0 +1,59 @@
+<h2 class="heading-text">Schedule View</h2>
+<div class="row course-block" ng-repeat="course in courses">
+    <div class="col-sm-3">
+        <input class="form-control" type="text" placeholder="Class Name" ng-model="course.name" />
+    </div>
+    <div class="col-sm-2">
+        <input class="form-control" type="time" placeholder="Start Time" ng-model="course.startTime" />
+    </div>
+    <div class="col-sm-2">
+        <input class="form-control" type="time" placeholder="Start Time" ng-model="course.endTime" />
+    </div>
+    <div class="col-sm-4">
+        <label class="checkbox-inline" ng-repeat="day in course.days">
+            <input type="checkbox" ng-model="day.value" /> {{ day.symbol }}
+        </label>
+    </div>
+    <div class="col-sm-1">
+        <button ng-click="removeCourse($index)" style="padding-top: 7px;" type="button" class="close">&times;</button>
+    </div>
+</div>
+<hr>
+<h4 class="heading-text">Add a New Class</h4>
+<div class="row course-block">
+    <div class="col-sm-3">
+        <input class="form-control" type="text" placeholder="Class Name" ng-model="newCourse.name" />
+    </div>
+    <div class="col-sm-2">
+        <input class="form-control" type="time" placeholder="Start Time" ng-model="newCourse.startTime" />
+    </div>
+    <div class="col-sm-2">
+        <input class="form-control" type="time" placeholder="End Time" ng-model="newCourse.endTime" />
+    </div>
+    <div class="col-sm-4">
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="newCourse.days[0]['value']" /> M
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="newCourse.days[1]['value']" /> T
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="newCourse.days[2]['value']" /> W
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="newCourse.days[3]['value']" /> R
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="newCourse.days[4]['value']" /> F
+        </label>
+    </div>
+    <div class="col-sm-1">
+        <button ng-click="addCourse()" style="padding-top: 7px;" type="button" class="close">&plus;</button>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <input type="button" class="btn btn-primary" value="Save Schedule" disabled />
+    </div>
+</div>
