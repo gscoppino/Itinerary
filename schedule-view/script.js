@@ -10,7 +10,7 @@ Itinerary.directive('scheduleView', ['courseList', function(courseList) {
                 name: undefined,
                 startTime: undefined,
                 endTime: undefined,
-                'days': [
+                days: [
                     {
                         'symbol': 'M',
                         'value': false
@@ -31,7 +31,8 @@ Itinerary.directive('scheduleView', ['courseList', function(courseList) {
                         'symbol':'F',
                         'value': false
                     }
-                ]
+                ],
+                viewColor: undefined
             };
             
             scope.addCourse = function() {
@@ -42,7 +43,7 @@ Itinerary.directive('scheduleView', ['courseList', function(courseList) {
                         name: undefined,
                         startTime: undefined,
                         endTime: undefined,
-                        'days': [
+                        days: [
                             {
                                 'symbol': 'M',
                                 'value': false
@@ -63,7 +64,8 @@ Itinerary.directive('scheduleView', ['courseList', function(courseList) {
                                 'symbol':'F',
                                 'value': false
                             }
-                        ]
+                        ],
+                        viewColor: undefined
                     };
                 }
             }

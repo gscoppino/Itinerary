@@ -25,7 +25,8 @@ Itinerary.value('courseList', [
                 'symbol':'F',
                 'value': true
             }
-        ]
+        ],
+        'viewColor': '#0088FF'
     },
     {
         'name': 'MATH 2253',
@@ -52,6 +53,7 @@ Itinerary.value('courseList', [
                 'symbol':'F',
                 'value': false
             }
-        ]
+        ],
+        'viewColor': '#88FF00'
     }
 ]);

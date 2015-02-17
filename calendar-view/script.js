@@ -19,7 +19,7 @@ Itinerary.directive('calendarView', ['courseList', function(courseList) {
                             var timeOffset = course.startTime - new Date(1970, 0, 1, 6, 0, 0);
                             var top = ((timeOffset / 1000) / 3600) * 39; // convert from ms to hrs then translate to px.
                             angular.element(insertionPoint).append('\
-                            <div style="top:'+top+'px; height:'+height+'px; background-color: #999;" class="table-overlay-course">\
+                            <div style="top:'+top+'px; height:'+height+'px; background-color:'+course.viewColor+';" class="table-overlay-course">\
                                 <span>'+course.name+'</span>\
                             </div>');
                         }
