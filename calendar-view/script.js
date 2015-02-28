@@ -14,12 +14,12 @@ Itinerary.directive('calendarView', ['courseList', function(courseList) {
                             var insertionPoint = dayTable.querySelector('.table-overlay-offset');
                             
                             var timeSpan = course.endTime - course.startTime;
-                            var height = ((timeSpan / 1000) / 3600) * 39;
+                            var height = ((timeSpan / 1000.0) / 3600.0) * 2.45;
                             
                             var timeOffset = course.startTime - new Date(1970, 0, 1, 6, 0, 0);
-                            var top = ((timeOffset / 1000) / 3600) * 39; // convert from ms to hrs then translate to px.
+                            var top = ((timeOffset / 1000.0) / 3600.0) * 2.45; // convert from ms to hrs then translate to px.
                             angular.element(insertionPoint).append('\
-                            <div style="top:'+top+'px; height:'+height+'px; background-color:'+course.viewColor+';" class="table-overlay-course">\
+                            <div style="top:'+top+'em; height:'+height+'em; background-color:'+course.viewColor+';" class="table-overlay-course">\
                                 <span>'+course.name+'</span>\
                             </div>');
                         }
